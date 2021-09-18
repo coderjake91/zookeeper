@@ -108,6 +108,25 @@
         "loving"
       ],
       "id": "10"
+    },
+    {
+      "name": "Larry",
+      "species": "lemur",
+      "diet": "omnivore",
+      "personality": [
+        "hungry"
+      ],
+      "id": "11"
+    },
+    {
+      "name": "Jim",
+      "species": "alligator",
+      "diet": "carnivore",
+      "personalityTraits": [
+        "hungry",
+        "angry"
+      ],
+      "id": "12"
     }
   ]
 }
