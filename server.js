@@ -6,6 +6,7 @@ const PORT = process.env.PORT || 3001;
 //instantiate the server
 const app = express();
 
+//function that filters user query requests
 function filterByQuery(query, animalsArray) {
     let personalityTraitsArray = [];
     //save animalsArray as filteredResults here:
@@ -36,12 +37,29 @@ function filterByQuery(query, animalsArray) {
     return filteredResults;
 }
 
+//function that finds and returns a single animal object by its id parameter
+function findById(id, animalsArray) {
+    const result = animalsArray.filter(animal => animal.id === id)[0];
+    console.log(result);
+    return result;
+}
+
+//important note: this GET route must come before other param routes
 app.get('/api/animals', (req, res) => {
     let results = animals;
     if(req.query) {
         results = filterByQuery(req.query, results);
     }
     res.json(results);
+});
+
+app.get('/api/animals/:id', (req,res) => {
+    const result = findById(req.params.id, animals);
+    if(result) {
+        res.json(result);
+    } else {
+        res.send(404);
+    }
 });
 
 //alow server to listen on port 3001
