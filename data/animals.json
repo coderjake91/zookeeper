@@ -113,7 +113,7 @@
       "name": "Larry",
       "species": "lemur",
       "diet": "omnivore",
-      "personality": [
+      "personalityTraits": [
         "hungry"
       ],
       "id": "11"
@@ -127,6 +127,15 @@
         "angry"
       ],
       "id": "12"
+    },
+    {
+      "name": "Dumbo",
+      "species": "elephant",
+      "diet": "herbivore",
+      "personalityTraits": [
+        "lovable"
+      ],
+      "id": "13"
     }
   ]
 }

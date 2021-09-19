@@ -84,7 +84,13 @@ app.get('/api/animals', (req, res) => {
     if(req.query) {
         results = filterByQuery(req.query, results);
     }
-    res.json(results);
+
+    if(results.length != 0){
+        res.json(results);
+    } else {
+        res.status(400).send('The data you requested does not exist.')
+    }
+    
 });
 
 app.get('/api/animals/:id', (req, res) => {
