@@ -7,10 +7,15 @@ const PORT = process.env.PORT || 3001;
 
 //instantiate the server
 const app = express();
-//"Middleware" to interpret incoming POST request data for use by the server
+
+//---------------Middleware----------------------------------------------------
+//interpret incoming POST request data for use by the server
 app.use(express.urlencoded({extended: true}));
 //parse incoming JSON data
 app.use(express.json());
+//serve other static assets in the public folder
+app.use(express.static('public'));
+//-----------------------------------------------------------------------------
 
 //function that filters user query requests
 function filterByQuery(query, animalsArray) {
@@ -115,6 +120,26 @@ app.post('/api/animals', (req, res) => {
         console.log(animal);
         res.json(animal);
     }
+});
+
+//route that serves the index.html page
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, './public/index.html'));
+});
+
+//route that serves the animals.html page
+app.get('/animals', (req, res) => {
+    res.sendFile(path.join(__dirname, './public/animals.html'));
+});
+
+//route that serves the zookeepers.html page
+app.get('/zookeepers', (req, res) => {
+    res.sendFile(path.join(__dirname, './public/zookeepers.html'));
+});
+
+//wildcard route to catch non-existent requests (this route always comes last)
+app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname, './public/index.html'));
 });
 
 //alow server to listen on port 3001

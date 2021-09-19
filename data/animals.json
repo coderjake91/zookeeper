@@ -133,9 +133,50 @@
       "species": "elephant",
       "diet": "herbivore",
       "personalityTraits": [
-        "lovable"
+        "loving"
       ],
       "id": "13"
+    },
+    {
+      "name": "Nina",
+      "species": "Lizard",
+      "diet": "omnivore",
+      "personalityTraits": [
+        "zany",
+        "anxious"
+      ],
+      "id": "14"
+    },
+    {
+      "name": "Milo",
+      "species": "Dog",
+      "diet": "omnivore",
+      "personalityTraits": [
+        "hungry",
+        "zany",
+        "anxious",
+        "loving",
+        "goofy"
+      ],
+      "id": "15"
+    },
+    {
+      "name": "Bobby",
+      "species": "Snake",
+      "diet": "carnivore",
+      "personalityTraits": [
+        "hungry"
+      ],
+      "id": "16"
+    },
+    {
+      "name": "curtis",
+      "species": "fish",
+      "diet": "omnivore",
+      "personalityTraits": [
+        "hungry"
+      ],
+      "id": "17"
     }
   ]
 }
