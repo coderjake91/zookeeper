@@ -177,6 +177,25 @@
         "hungry"
       ],
       "id": "17"
+    },
+    {
+      "name": "Holly",
+      "species": "Giraffe",
+      "diet": "herbivore",
+      "personalityTraits": [
+        "zany",
+        "goofy"
+      ],
+      "id": "18"
+    },
+    {
+      "name": "Bob",
+      "species": "Rhino",
+      "diet": "herbivore",
+      "personalityTraits": [
+        "hungry"
+      ],
+      "id": "19"
     }
   ]
 }
